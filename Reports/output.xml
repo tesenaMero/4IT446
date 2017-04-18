@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generated="20170418 08:29:23.181" generator="Robot 3.0.2 (Python 2.7.13 on win32)">
+<robot generated="20170418 08:45:10.481" generator="Robot 3.0.2 (Python 2.7.13 on win32)">
 <suite source="C:\coding\repos\git_repos\4IT446\Tests\Smoke_tests\smoke_test.robot" id="s1" name="Smoke Test">
 <test id="s1-t1" name="LoginTest">
 <kw type="setup" name="Open Czc To The Main Page" library="Mahara_demo_keywords">
@@ -13,46 +13,55 @@
 <arg>${url}</arg>
 <arg>${browser}</arg>
 </arguments>
-<msg timestamp="20170418 08:29:23.397" level="INFO">Opening browser 'chrome' to base url 'https://www.czc.cz/'</msg>
-<status status="PASS" endtime="20170418 08:29:29.208" starttime="20170418 08:29:23.397"></status>
+<msg timestamp="20170418 08:45:10.713" level="INFO">Opening browser 'chrome' to base url 'https://www.czc.cz/'</msg>
+<status status="PASS" endtime="20170418 08:45:16.334" starttime="20170418 08:45:10.712"></status>
 </kw>
 <kw name="Maximize Browser Window" library="Selenium2Library">
 <doc>Maximizes current browser window.</doc>
 <kw name="Capture Page Screenshot" library="Selenium2Library">
 <doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<msg timestamp="20170418 08:29:49.286" level="FAIL">WebDriverException: Message: unknown error: cannot get automation extension
+<msg timestamp="20170418 08:45:36.423" level="FAIL">WebDriverException: Message: unknown error: cannot get automation extension
 from unknown error: page could not be found: chrome-extension://aapnijgdinlhnhlmodcfapnahmbfebeb/_generated_background_page.html
   (Session info: chrome=57.0.2987.133)
   (Driver info: chromedriver=2.25.426923 (0390b88869384d6eb0d5d09729679f934aab9eed),platform=Windows NT 10.0.10586 x86_64)
 </msg>
-<status status="FAIL" endtime="20170418 08:29:49.286" starttime="20170418 08:29:39.244"></status>
+<status status="FAIL" endtime="20170418 08:45:36.423" starttime="20170418 08:45:26.389"></status>
 </kw>
-<msg timestamp="20170418 08:29:49.287" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: unknown error: cannot get automation extension
+<msg timestamp="20170418 08:45:36.423" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: unknown error: cannot get automation extension
 from unknown error: page could not be found: chrome-extension://aapnijgdinlhnhlmodcfapnahmbfebeb/_generated_background_page.html
   (Session info: chrome=57.0.2987.133)
   (Driver info: chromedriver=2.25.426923 (0390b88869384d6eb0d5d09729679f934aab9eed),platform=Windows NT 10.0.10586 x86_64)
 </msg>
-<msg timestamp="20170418 08:29:49.318" level="FAIL">WebDriverException: Message: unknown error: cannot get automation extension
+<msg timestamp="20170418 08:45:36.458" level="FAIL">WebDriverException: Message: unknown error: cannot get automation extension
 from unknown error: page could not be found: chrome-extension://aapnijgdinlhnhlmodcfapnahmbfebeb/_generated_background_page.html
   (Session info: chrome=57.0.2987.133)
   (Driver info: chromedriver=2.25.426923 (0390b88869384d6eb0d5d09729679f934aab9eed),platform=Windows NT 10.0.10586 x86_64)
 </msg>
-<status status="FAIL" endtime="20170418 08:29:49.318" starttime="20170418 08:29:29.208"></status>
+<status status="FAIL" endtime="20170418 08:45:36.459" starttime="20170418 08:45:16.334"></status>
 </kw>
-<status status="FAIL" endtime="20170418 08:29:49.319" starttime="20170418 08:29:23.396"></status>
+<status status="FAIL" endtime="20170418 08:45:36.459" starttime="20170418 08:45:10.711"></status>
 </kw>
 <kw type="teardown" name="Close All Browsers" library="Selenium2Library">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" endtime="20170418 08:29:52.353" starttime="20170418 08:29:49.319"></status>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20170418 08:45:40.514" level="FAIL">error: [Errno 10061] No connection could be made because the target machine actively refused it</msg>
+<status status="FAIL" endtime="20170418 08:45:40.514" starttime="20170418 08:45:39.505"></status>
 </kw>
-<status status="FAIL" endtime="20170418 08:29:52.354" critical="yes" starttime="20170418 08:29:23.395">Setup failed:
+<msg timestamp="20170418 08:45:40.515" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: error: [Errno 10061] No connection could be made because the target machine actively refused it</msg>
+<status status="FAIL" endtime="20170418 08:45:40.518" starttime="20170418 08:45:36.460">Execution terminated by signal</status>
+</kw>
+<status status="FAIL" endtime="20170418 08:45:40.518" critical="yes" starttime="20170418 08:45:10.707">Setup failed:
 WebDriverException: Message: unknown error: cannot get automation extension
 from unknown error: page could not be found: chrome-extension://aapnijgdinlhnhlmodcfapnahmbfebeb/_generated_background_page.html
   (Session info: chrome=57.0.2987.133)
   (Driver info: chromedriver=2.25.426923 (0390b88869384d6eb0d5d09729679f934aab9eed),platform=Windows NT 10.0.10586 x86_64)
-</status>
+
+
+Also teardown failed:
+Execution terminated by signal</status>
 </test>
-<status status="FAIL" endtime="20170418 08:29:52.396" starttime="20170418 08:29:23.186"></status>
+<status status="FAIL" endtime="20170418 08:45:40.575" starttime="20170418 08:45:10.485"></status>
 </suite>
 <statistics>
 <total>
@@ -66,10 +75,11 @@ from unknown error: page could not be found: chrome-extension://aapnijgdinlhnhlm
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20170418 08:29:49.287" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: unknown error: cannot get automation extension
+<msg timestamp="20170418 08:45:36.423" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: unknown error: cannot get automation extension
 from unknown error: page could not be found: chrome-extension://aapnijgdinlhnhlmodcfapnahmbfebeb/_generated_background_page.html
   (Session info: chrome=57.0.2987.133)
   (Driver info: chromedriver=2.25.426923 (0390b88869384d6eb0d5d09729679f934aab9eed),platform=Windows NT 10.0.10586 x86_64)
 </msg>
+<msg timestamp="20170418 08:45:40.515" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: error: [Errno 10061] No connection could be made because the target machine actively refused it</msg>
 </errors>
 </robot>
