@@ -1,0 +1,5 @@
+*** Variables ***
+${userNameField}	id=login_login_username
+${passwordField}	id=login_login_password
+${loginButton}		id=login_submit
+${errorMessages}	id=messages
