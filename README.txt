@@ -1,4 +1,4 @@
-robot -d Reports Tests/Smoke_tests/smoke_test.robot
+robot -d Reports Tests/**/*.robot
 
 karel
 honzaL

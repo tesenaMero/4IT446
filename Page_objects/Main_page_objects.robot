@@ -1,0 +1,2 @@
+*** Variables ***
+${mainPage}        id=login

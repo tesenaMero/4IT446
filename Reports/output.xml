@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generated="20170422 12:06:09.845" generator="Robot 3.0.2 (Python 2.7.13 on win32)">
-<suite source="C:\coding\repos\git_repos\4IT446\Tests\Smoke_tests\smoke_test.robot" id="s1" name="Smoke Test">
-<test id="s1-t1" name="LoginTest">
-<kw type="setup" name="Open Czc To The Main Page" library="Mahara_demo_keywords">
+<robot generated="20170422 14:08:50.499" generator="Robot 3.0.2 (Python 2.7.13 on win32)">
+<suite id="s1" name="Login Test &amp; Smoke Test">
+<suite source="C:\coding\repos\git_repos\4IT446\Tests\Functional_tests\login_test.robot" id="s1-s1" name="Login Test">
+<test id="s1-s1-t1" name="LoginTest_Empty">
+<kw type="setup" name="Open Czc To The Main Page" library="Tests">
 <arguments>
 <arg>${url}</arg>
 <arg>${browser}</arg>
@@ -13,61 +14,482 @@
 <arg>${url}</arg>
 <arg>${browser}</arg>
 </arguments>
-<msg timestamp="20170422 12:06:10.043" level="INFO">Opening browser 'chrome' to base url 'https://www.czc.cz/'</msg>
-<status status="PASS" endtime="20170422 12:06:16.329" starttime="20170422 12:06:10.042"></status>
+<msg timestamp="20170422 14:08:50.689" level="INFO">Opening browser 'chrome' to base url 'https://www.czc.cz/'</msg>
+<status status="PASS" endtime="20170422 14:08:56.547" starttime="20170422 14:08:50.689"></status>
 </kw>
-<kw name="Maximize Browser Window" library="Selenium2Library">
-<doc>Maximizes current browser window.</doc>
-<kw name="Capture Page Screenshot" library="Selenium2Library">
-<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<msg timestamp="20170422 12:06:36.358" level="FAIL">WebDriverException: Message: unknown error: cannot get automation extension
-from chrome not reachable
-  (Session info: chrome=57.0.2987.133)
-  (Driver info: chromedriver=2.25.426923 (0390b88869384d6eb0d5d09729679f934aab9eed),platform=Windows NT 10.0.10586 x86_64)
-</msg>
-<status status="FAIL" endtime="20170422 12:06:36.358" starttime="20170422 12:06:26.404"></status>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${mainPage}</arg>
+</arguments>
+<status status="PASS" endtime="20170422 14:08:56.584" starttime="20170422 14:08:56.547"></status>
 </kw>
-<msg timestamp="20170422 12:06:36.358" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: unknown error: cannot get automation extension
-from chrome not reachable
-  (Session info: chrome=57.0.2987.133)
-  (Driver info: chromedriver=2.25.426923 (0390b88869384d6eb0d5d09729679f934aab9eed),platform=Windows NT 10.0.10586 x86_64)
-</msg>
-<msg timestamp="20170422 12:06:36.362" level="FAIL">WebDriverException: Message: unknown error: cannot get automation extension
-from unknown error: page could not be found: chrome-extension://aapnijgdinlhnhlmodcfapnahmbfebeb/_generated_background_page.html
-  (Session info: chrome=57.0.2987.133)
-  (Driver info: chromedriver=2.25.426923 (0390b88869384d6eb0d5d09729679f934aab9eed),platform=Windows NT 10.0.10586 x86_64)
-</msg>
-<status status="FAIL" endtime="20170422 12:06:36.363" starttime="20170422 12:06:16.330"></status>
+<status status="PASS" endtime="20170422 14:08:56.584" starttime="20170422 14:08:50.689"></status>
 </kw>
-<status status="FAIL" endtime="20170422 12:06:36.363" starttime="20170422 12:06:10.042"></status>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>login</arg>
+</arguments>
+<msg timestamp="20170422 14:08:56.585" level="INFO">Clicking link 'login'.</msg>
+<status status="PASS" endtime="20170422 14:08:56.673" starttime="20170422 14:08:56.585"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${logInForm}</arg>
+</arguments>
+<status status="PASS" endtime="20170422 14:08:56.937" starttime="20170422 14:08:56.674"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>${loginButton}</arg>
+</arguments>
+<msg timestamp="20170422 14:08:56.938" level="INFO">Clicking button 'css=button.submit'.</msg>
+<status status="PASS" endtime="20170422 14:08:57.048" starttime="20170422 14:08:56.937"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${errorMessagesUser}</arg>
+</arguments>
+<status status="PASS" endtime="20170422 14:08:57.131" starttime="20170422 14:08:57.057"></status>
 </kw>
 <kw type="teardown" name="Close All Browsers" library="Selenium2Library">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" endtime="20170422 12:06:39.374" starttime="20170422 12:06:36.363"></status>
+<status status="PASS" endtime="20170422 14:09:00.453" starttime="20170422 14:08:57.131"></status>
 </kw>
-<status status="FAIL" endtime="20170422 12:06:39.375" critical="yes" starttime="20170422 12:06:10.041">Setup failed:
-WebDriverException: Message: unknown error: cannot get automation extension
+<status status="PASS" endtime="20170422 14:09:00.453" critical="yes" starttime="20170422 14:08:50.687"></status>
+</test>
+<test id="s1-s1-t2" name="LoginTest_FaultUserAndPass">
+<kw type="setup" name="Open Czc To The Main Page" library="Tests">
+<arguments>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20170422 14:09:00.469" level="INFO">Opening browser 'chrome' to base url 'https://www.czc.cz/'</msg>
+<status status="PASS" endtime="20170422 14:09:06.174" starttime="20170422 14:09:00.468"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${mainPage}</arg>
+</arguments>
+<status status="PASS" endtime="20170422 14:09:06.205" starttime="20170422 14:09:06.174"></status>
+</kw>
+<status status="PASS" endtime="20170422 14:09:06.206" starttime="20170422 14:09:00.468"></status>
+</kw>
+<kw name="Login To Czc" library="Tests">
+<arguments>
+<arg>${invalidUserName}</arg>
+<arg>${invalidPassword}</arg>
+</arguments>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>login</arg>
+</arguments>
+<msg timestamp="20170422 14:09:06.207" level="INFO">Clicking link 'login'.</msg>
+<status status="PASS" endtime="20170422 14:09:06.292" starttime="20170422 14:09:06.207"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${logInForm}</arg>
+</arguments>
+<status status="PASS" endtime="20170422 14:09:06.547" starttime="20170422 14:09:06.292"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${userNameField}</arg>
+<arg>${user}</arg>
+</arguments>
+<msg timestamp="20170422 14:09:06.548" level="INFO">Typing text 'faultUsername' into text field 'id=frm-name'</msg>
+<status status="PASS" endtime="20170422 14:09:06.768" starttime="20170422 14:09:06.548"></status>
+</kw>
+<kw name="Input Password" library="Selenium2Library">
+<doc>Types the given password into text field identified by `locator`.</doc>
+<arguments>
+<arg>${passwordField}</arg>
+<arg>${pwd}</arg>
+</arguments>
+<msg timestamp="20170422 14:09:06.770" level="INFO">Typing password into text field 'id=frm-password'</msg>
+<status status="PASS" endtime="20170422 14:09:06.923" starttime="20170422 14:09:06.769"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>${loginButton}</arg>
+</arguments>
+<msg timestamp="20170422 14:09:06.924" level="INFO">Clicking button 'css=button.submit'.</msg>
+<status status="PASS" endtime="20170422 14:09:07.045" starttime="20170422 14:09:06.923"></status>
+</kw>
+<status status="PASS" endtime="20170422 14:09:07.045" starttime="20170422 14:09:06.206"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${errorMessagesUser}</arg>
+</arguments>
+<status status="PASS" endtime="20170422 14:09:08.099" starttime="20170422 14:09:07.047"></status>
+</kw>
+<kw type="teardown" name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" endtime="20170422 14:09:11.441" starttime="20170422 14:09:08.101"></status>
+</kw>
+<status status="PASS" endtime="20170422 14:09:11.442" critical="yes" starttime="20170422 14:09:00.465"></status>
+</test>
+<test id="s1-s1-t3" name="LoginTest_FaultUser">
+<kw type="setup" name="Open Czc To The Main Page" library="Tests">
+<arguments>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20170422 14:09:11.451" level="INFO">Opening browser 'chrome' to base url 'https://www.czc.cz/'</msg>
+<status status="PASS" endtime="20170422 14:09:17.336" starttime="20170422 14:09:11.451"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${mainPage}</arg>
+</arguments>
+<status status="PASS" endtime="20170422 14:09:17.370" starttime="20170422 14:09:17.336"></status>
+</kw>
+<status status="PASS" endtime="20170422 14:09:17.370" starttime="20170422 14:09:11.450"></status>
+</kw>
+<kw name="Login To Czc" library="Tests">
+<arguments>
+<arg>${invalidUserName}</arg>
+<arg>${validPassword}</arg>
+</arguments>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>login</arg>
+</arguments>
+<msg timestamp="20170422 14:09:17.372" level="INFO">Clicking link 'login'.</msg>
+<status status="PASS" endtime="20170422 14:09:17.454" starttime="20170422 14:09:17.372"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${logInForm}</arg>
+</arguments>
+<status status="PASS" endtime="20170422 14:09:17.717" starttime="20170422 14:09:17.455"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${userNameField}</arg>
+<arg>${user}</arg>
+</arguments>
+<msg timestamp="20170422 14:09:17.719" level="INFO">Typing text 'faultUsername' into text field 'id=frm-name'</msg>
+<status status="PASS" endtime="20170422 14:09:17.908" starttime="20170422 14:09:17.718"></status>
+</kw>
+<kw name="Input Password" library="Selenium2Library">
+<doc>Types the given password into text field identified by `locator`.</doc>
+<arguments>
+<arg>${passwordField}</arg>
+<arg>${pwd}</arg>
+</arguments>
+<msg timestamp="20170422 14:09:17.909" level="INFO">Typing password into text field 'id=frm-password'</msg>
+<status status="PASS" endtime="20170422 14:09:17.996" starttime="20170422 14:09:17.908"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>${loginButton}</arg>
+</arguments>
+<msg timestamp="20170422 14:09:17.996" level="INFO">Clicking button 'css=button.submit'.</msg>
+<status status="PASS" endtime="20170422 14:09:18.125" starttime="20170422 14:09:17.996"></status>
+</kw>
+<status status="PASS" endtime="20170422 14:09:18.125" starttime="20170422 14:09:17.371"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${errorMessagesUser}</arg>
+</arguments>
+<status status="PASS" endtime="20170422 14:09:19.172" starttime="20170422 14:09:18.127"></status>
+</kw>
+<kw type="teardown" name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" endtime="20170422 14:09:22.451" starttime="20170422 14:09:19.172"></status>
+</kw>
+<status status="PASS" endtime="20170422 14:09:22.452" critical="yes" starttime="20170422 14:09:11.448"></status>
+</test>
+<test id="s1-s1-t4" name="LoginTest_FaultPass">
+<kw type="setup" name="Open Czc To The Main Page" library="Tests">
+<arguments>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20170422 14:09:22.462" level="INFO">Opening browser 'chrome' to base url 'https://www.czc.cz/'</msg>
+<status status="PASS" endtime="20170422 14:09:28.432" starttime="20170422 14:09:22.461"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${mainPage}</arg>
+</arguments>
+<status status="PASS" endtime="20170422 14:09:28.488" starttime="20170422 14:09:28.432"></status>
+</kw>
+<status status="PASS" endtime="20170422 14:09:28.489" starttime="20170422 14:09:22.460"></status>
+</kw>
+<kw name="Login To Czc" library="Tests">
+<arguments>
+<arg>${validUserName}</arg>
+<arg>${invalidPassword}</arg>
+</arguments>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>login</arg>
+</arguments>
+<msg timestamp="20170422 14:09:28.490" level="INFO">Clicking link 'login'.</msg>
+<status status="PASS" endtime="20170422 14:09:28.576" starttime="20170422 14:09:28.490"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${logInForm}</arg>
+</arguments>
+<status status="PASS" endtime="20170422 14:09:28.839" starttime="20170422 14:09:28.576"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${userNameField}</arg>
+<arg>${user}</arg>
+</arguments>
+<msg timestamp="20170422 14:09:28.840" level="INFO">Typing text 'dd' into text field 'id=frm-name'</msg>
+<status status="PASS" endtime="20170422 14:09:28.939" starttime="20170422 14:09:28.839"></status>
+</kw>
+<kw name="Input Password" library="Selenium2Library">
+<doc>Types the given password into text field identified by `locator`.</doc>
+<arguments>
+<arg>${passwordField}</arg>
+<arg>${pwd}</arg>
+</arguments>
+<msg timestamp="20170422 14:09:28.939" level="INFO">Typing password into text field 'id=frm-password'</msg>
+<status status="PASS" endtime="20170422 14:09:29.110" starttime="20170422 14:09:28.939"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>${loginButton}</arg>
+</arguments>
+<msg timestamp="20170422 14:09:29.110" level="INFO">Clicking button 'css=button.submit'.</msg>
+<status status="PASS" endtime="20170422 14:09:29.235" starttime="20170422 14:09:29.110"></status>
+</kw>
+<status status="PASS" endtime="20170422 14:09:29.235" starttime="20170422 14:09:28.489"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${errorMessagesPass}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20170422 14:09:44.497" level="FAIL">WebDriverException: Message: unknown error: cannot get automation extension
 from unknown error: page could not be found: chrome-extension://aapnijgdinlhnhlmodcfapnahmbfebeb/_generated_background_page.html
   (Session info: chrome=57.0.2987.133)
   (Driver info: chromedriver=2.25.426923 (0390b88869384d6eb0d5d09729679f934aab9eed),platform=Windows NT 10.0.10586 x86_64)
-</status>
+</msg>
+<status status="FAIL" endtime="20170422 14:09:44.498" starttime="20170422 14:09:34.445"></status>
+</kw>
+<msg timestamp="20170422 14:09:44.498" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: unknown error: cannot get automation extension
+from unknown error: page could not be found: chrome-extension://aapnijgdinlhnhlmodcfapnahmbfebeb/_generated_background_page.html
+  (Session info: chrome=57.0.2987.133)
+  (Driver info: chromedriver=2.25.426923 (0390b88869384d6eb0d5d09729679f934aab9eed),platform=Windows NT 10.0.10586 x86_64)
+</msg>
+<msg timestamp="20170422 14:09:44.505" level="FAIL">Element locator 'css=label[for=frm-password].input-error' did not match any elements after 5 seconds</msg>
+<status status="FAIL" endtime="20170422 14:09:44.505" starttime="20170422 14:09:29.237"></status>
+</kw>
+<kw type="teardown" name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" endtime="20170422 14:09:47.980" starttime="20170422 14:09:44.506"></status>
+</kw>
+<status status="FAIL" endtime="20170422 14:09:47.980" critical="yes" starttime="20170422 14:09:22.458">Element locator 'css=label[for=frm-password].input-error' did not match any elements after 5 seconds</status>
 </test>
-<status status="FAIL" endtime="20170422 12:06:39.390" starttime="20170422 12:06:09.848"></status>
+<test id="s1-s1-t5" name="LoginTest_Success">
+<kw type="setup" name="Open Czc To The Main Page" library="Tests">
+<arguments>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20170422 14:09:47.991" level="INFO">Opening browser 'chrome' to base url 'https://www.czc.cz/'</msg>
+<status status="PASS" endtime="20170422 14:09:53.686" starttime="20170422 14:09:47.990"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${mainPage}</arg>
+</arguments>
+<status status="PASS" endtime="20170422 14:09:53.720" starttime="20170422 14:09:53.687"></status>
+</kw>
+<status status="PASS" endtime="20170422 14:09:53.721" starttime="20170422 14:09:47.989"></status>
+</kw>
+<kw name="Login To Czc" library="Tests">
+<arguments>
+<arg>${validUserName}</arg>
+<arg>${validPassword}</arg>
+</arguments>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>login</arg>
+</arguments>
+<msg timestamp="20170422 14:09:53.722" level="INFO">Clicking link 'login'.</msg>
+<status status="PASS" endtime="20170422 14:09:53.804" starttime="20170422 14:09:53.722"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${logInForm}</arg>
+</arguments>
+<status status="PASS" endtime="20170422 14:09:54.057" starttime="20170422 14:09:53.804"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${userNameField}</arg>
+<arg>${user}</arg>
+</arguments>
+<msg timestamp="20170422 14:09:54.057" level="INFO">Typing text 'dd' into text field 'id=frm-name'</msg>
+<status status="PASS" endtime="20170422 14:09:54.171" starttime="20170422 14:09:54.057"></status>
+</kw>
+<kw name="Input Password" library="Selenium2Library">
+<doc>Types the given password into text field identified by `locator`.</doc>
+<arguments>
+<arg>${passwordField}</arg>
+<arg>${pwd}</arg>
+</arguments>
+<msg timestamp="20170422 14:09:54.172" level="INFO">Typing password into text field 'id=frm-password'</msg>
+<status status="PASS" endtime="20170422 14:09:54.279" starttime="20170422 14:09:54.172"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>${loginButton}</arg>
+</arguments>
+<msg timestamp="20170422 14:09:54.281" level="INFO">Clicking button 'css=button.submit'.</msg>
+<status status="PASS" endtime="20170422 14:09:54.414" starttime="20170422 14:09:54.279"></status>
+</kw>
+<status status="PASS" endtime="20170422 14:09:54.414" starttime="20170422 14:09:53.721"></status>
+</kw>
+<kw name="Wait Until Element Is Not Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is not visible.</doc>
+<arguments>
+<arg>${logInForm}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20170422 14:10:09.500" level="FAIL">WebDriverException: Message: unknown error: cannot get automation extension
+from unknown error: page could not be found: chrome-extension://aapnijgdinlhnhlmodcfapnahmbfebeb/_generated_background_page.html
+  (Session info: chrome=57.0.2987.133)
+  (Driver info: chromedriver=2.25.426923 (0390b88869384d6eb0d5d09729679f934aab9eed),platform=Windows NT 10.0.10586 x86_64)
+</msg>
+<status status="FAIL" endtime="20170422 14:10:09.500" starttime="20170422 14:09:59.456"></status>
+</kw>
+<msg timestamp="20170422 14:10:09.501" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: unknown error: cannot get automation extension
+from unknown error: page could not be found: chrome-extension://aapnijgdinlhnhlmodcfapnahmbfebeb/_generated_background_page.html
+  (Session info: chrome=57.0.2987.133)
+  (Driver info: chromedriver=2.25.426923 (0390b88869384d6eb0d5d09729679f934aab9eed),platform=Windows NT 10.0.10586 x86_64)
+</msg>
+<msg timestamp="20170422 14:10:09.506" level="FAIL">Element 'id=popup-login' was still visible in 5 seconds</msg>
+<status status="FAIL" endtime="20170422 14:10:09.506" starttime="20170422 14:09:54.416"></status>
+</kw>
+<kw type="teardown" name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" endtime="20170422 14:10:12.854" starttime="20170422 14:10:09.507"></status>
+</kw>
+<status status="FAIL" endtime="20170422 14:10:12.855" critical="yes" starttime="20170422 14:09:47.987">Element 'id=popup-login' was still visible in 5 seconds</status>
+</test>
+<status status="FAIL" endtime="20170422 14:10:12.863" starttime="20170422 14:08:50.532"></status>
+</suite>
+<suite source="C:\coding\repos\git_repos\4IT446\Tests\Smoke_tests\smoke_test.robot" id="s1-s2" name="Smoke Test">
+<test id="s1-s2-t1" name="Open_page">
+<kw name="Open Czc To The Main Page" library="Tests">
+<arguments>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20170422 14:10:12.885" level="INFO">Opening browser 'chrome' to base url 'https://www.czc.cz/'</msg>
+<status status="PASS" endtime="20170422 14:10:18.638" starttime="20170422 14:10:12.885"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${mainPage}</arg>
+</arguments>
+<status status="PASS" endtime="20170422 14:10:18.672" starttime="20170422 14:10:18.638"></status>
+</kw>
+<status status="PASS" endtime="20170422 14:10:18.673" starttime="20170422 14:10:12.885"></status>
+</kw>
+<kw name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" endtime="20170422 14:10:21.986" starttime="20170422 14:10:18.673"></status>
+</kw>
+<status status="PASS" endtime="20170422 14:10:21.987" critical="yes" starttime="20170422 14:10:12.883"></status>
+</test>
+<status status="PASS" endtime="20170422 14:10:21.999" starttime="20170422 14:10:12.874"></status>
+</suite>
+<status status="FAIL" endtime="20170422 14:10:22.006" starttime="20170422 14:08:50.503"></status>
 </suite>
 <statistics>
 <total>
-<stat fail="1" pass="0">Critical Tests</stat>
-<stat fail="1" pass="0">All Tests</stat>
+<stat fail="2" pass="4">Critical Tests</stat>
+<stat fail="2" pass="4">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat fail="1" id="s1" name="Smoke Test" pass="0">Smoke Test</stat>
+<stat fail="2" id="s1" name="Login Test &amp; Smoke Test" pass="4">Login Test &amp; Smoke Test</stat>
+<stat fail="2" id="s1-s1" name="Login Test" pass="3">Login Test &amp; Smoke Test.Login Test</stat>
+<stat fail="0" id="s1-s2" name="Smoke Test" pass="1">Login Test &amp; Smoke Test.Smoke Test</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20170422 12:06:36.358" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: unknown error: cannot get automation extension
-from chrome not reachable
+<msg timestamp="20170422 14:09:44.498" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: unknown error: cannot get automation extension
+from unknown error: page could not be found: chrome-extension://aapnijgdinlhnhlmodcfapnahmbfebeb/_generated_background_page.html
+  (Session info: chrome=57.0.2987.133)
+  (Driver info: chromedriver=2.25.426923 (0390b88869384d6eb0d5d09729679f934aab9eed),platform=Windows NT 10.0.10586 x86_64)
+</msg>
+<msg timestamp="20170422 14:10:09.501" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: unknown error: cannot get automation extension
+from unknown error: page could not be found: chrome-extension://aapnijgdinlhnhlmodcfapnahmbfebeb/_generated_background_page.html
   (Session info: chrome=57.0.2987.133)
   (Driver info: chromedriver=2.25.426923 (0390b88869384d6eb0d5d09729679f934aab9eed),platform=Windows NT 10.0.10586 x86_64)
 </msg>
