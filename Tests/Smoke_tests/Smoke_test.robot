@@ -5,6 +5,7 @@ Resource	../../Keywords/Tests.robot
 Resource	../../Settings/Settings.robot
 
 *** Test Cases ***
-Open_page
-    Open Czc To The Main Page	${url}	${browser}
+Smoke test open czc page
+    [Tags]  Smoke
+    Open czc to the main page
     Close All Browsers
