@@ -1,8 +1,8 @@
 *** Settings ***
 Library		Selenium2Library
-Resource	../../Page_Objects/Main_page_objects.robot
 Resource	../../Page_Objects/Login_modal_objects.robot
-Resource	../../Keywords/Tests.robot
+Resource	../../Keywords/Main_page_keywords.robot
+Resource	../../Keywords/Login_modal_keywords.robot
 Resource	../../Settings/Settings.robot
 Test Setup		Open czc to the main page
 Test Teardown	Close All Browsers

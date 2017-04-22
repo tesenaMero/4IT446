@@ -1,8 +1,7 @@
+*** Settings ***
+Resource	../Page_Objects/Login_modal_objects.robot
+
 *** Keywords ***
-Open czc to the main page
-	[Arguments]		${url}=${url}	${browser}=${browser}
-	Open Browser	${url}	${browser}
-	Wait Until Element Is Visible	${mainPage}
 
 Open login form
 	Click Link		login
