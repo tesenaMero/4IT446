@@ -1,5 +1,5 @@
-#4IT446 - Řízení kvality softwaru
-##Automatizované testování eshopu czc.cz
+# 4IT446 - Řízení kvality softwaru
+## Automatizované testování eshopu czc.cz
 ```
 robot -d Reports Tests/**/*.robot
 ```
@@ -14,7 +14,7 @@ robot --help
 
 
 
-###Vývojové prostředí (zatím nevím jak tam dostat podporu Selenium2Library):
+### Vývojové prostředí (zatím nevím jak tam dostat podporu Selenium2Library):
 - Web Storm (ultimate verze zdarma, stačí si jen zažádat o studentský účet)
 - Po instalaci stačí otevřít projekt
 - poté CTRL + ALT + S
