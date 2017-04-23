@@ -1,6 +1,6 @@
 *** Settings ***
 Library		Selenium2Library
-Resource	../../Keywords/Main_page_keywords.robot
+Resource	../../Page_objects/czc.robot
 
 *** Test Cases ***
 Smoke test open czc page
