@@ -12,6 +12,10 @@ robot -i Smoke -d Reports Tests/**/*.robot
 robot --help
 ```
 
+[jenkins](http://147.32.72.31:8080)
+Uživatel: admin
+Heslo (doplnit): 
+
 
 
 ### Vývojové prostředí (zatím nevím jak tam dostat podporu Selenium2Library):

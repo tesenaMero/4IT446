@@ -1,5 +1,5 @@
 *** Variables ***
-${logInForm}        id=popup-login
+${logInForm}        css=div.open
 ${userNameField}	id=frm-name
 ${passwordField}	id=frm-password
 ${submitLogin}		css=button.submit

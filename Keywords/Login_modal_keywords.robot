@@ -10,5 +10,5 @@ Open login form
 Login to czc with creditals
 	[Arguments]		${user}		${pwd}
 	Input Text		${userNameField}	${user}
-	Input Password	${passwordField}	${pwd}
+	Input Text	${passwordField}	${pwd}
 	Click Button	${submitLogin}

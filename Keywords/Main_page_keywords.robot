@@ -7,7 +7,7 @@ Open czc to the main page
 	[Arguments]		${url_p}=${url}	${browser_p}=${browser}
 	Open Browser	${url_p}	${browser_p}
 	Wait Until Element Is Visible	${mainPage}
-#	Maximize Browser Window
+	Maximize Browser Window
 
 Search for
     [Arguments]  ${searchString}
