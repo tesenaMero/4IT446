@@ -14,7 +14,7 @@ robot --help
 
 [jenkins](http://147.32.72.31:8080)
 Uživatel: admin
-Heslo (doplnit): 
+Heslo: Heslo123
 
 
 
