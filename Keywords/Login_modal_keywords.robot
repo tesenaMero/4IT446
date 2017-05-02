@@ -10,5 +10,7 @@ Open login form
 Login to czc with creditals
 	[Arguments]		${user}		${pwd}
 	Input Text		${userNameField}	${user}
+	Sleep   5
 	Input Text	${passwordField}	${pwd}
+	Sleep   5
 	Click Button	${submitLogin}
