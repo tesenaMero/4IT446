@@ -2,6 +2,7 @@
 Documentation  This test suite is veryfing that add to basket function is able to put product into basket
 Library		Selenium2Library
 Resource	../../Keywords/Main_page_keywords.robot
+Resource	../../Keywords/Login_modal_keywords.robot
 Suite Setup 		Run keywords  Open czc to the main page
 ...             AND     Search For  ${testProduct}
 Suite Teardown	Close All Browsers
