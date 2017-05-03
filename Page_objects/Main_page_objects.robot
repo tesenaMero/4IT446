@@ -1,4 +1,5 @@
 *** Variables ***
-${mainPage}        id=login
+${mainPage}        id=main
 ${searchBar}    id=fulltext
 ${searchBarSubmitButton}	fulltextSubmit
+${loggedUserNameField}  css=a#logged-user

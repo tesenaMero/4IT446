@@ -14,7 +14,7 @@ ${productName}   MSI GP72 7RD-025XCZ Leopard, černá
 Product not found warning displayed
 	Element Should Be Visible	${productNotFoundWarning}
 
-Product is found and dispayed as first product
+Product is found and displayed as first product
     [Arguments]  ${searchString}
 	Element Should Be Visible	${productFoundHeader}
 	Element Should Contain    ${productFoundHeader}    Vyhledávání "${searchString}"
@@ -25,7 +25,7 @@ Test search for given existing product
     [Documentation]  Test search for given existing product, expecting to see the product listed as first
     [Tags]  Product     ProductSearch   PositiveSmokeTest
 	Search for	${productName}
-	Product is found and dispayed as first product      ${productName}
+	Product is found and displayed as first product      ${productName}
 
 Test search for not existing product
     [Documentation]  Test search for not existing product, expecting to see message that prodoct does not exist
