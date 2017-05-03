@@ -50,16 +50,19 @@ Open product option
 
 *** Test Cases ***
 Test search for opening the detail of an existing product
-    [Tags]  Product     ProductSearch   PositiveSmokeTest   ProductDetail
+    [Documentation]  Verifies that it is possible to open the detail of an existing product
+    [Tags]  Product     OtherProduct
     Get product  ${productPc}   ${loadedPcCode}
 
 Test search for opening the detail of an existing product's option
-    [Tags]  Product     ProductSearch   PositiveSmokeTest   ProductOptionDetail
+    [Documentation]  Verifies that it is possible to open the detail of an existing product's option
+    [Tags]  Product     OtherProduct
     Get product  ${productPc}   ${loadedPcCode}
     Open product option  ${variantProductUrl}
     Check For Code  ${loadedProduct}    ${optionPcCode}
 
 Test search for opening a non existing product's option
-    [Tags]  Product     ProductSearch   PositiveSmokeTest   ProductOptionFail
+    [Documentation]  Verify that there are no options present for a product without options
+    [Tags]  Product     OtherProduct
     Get product     ${productYoga}     ${yogaCode}
     Element Should Not Be Visible   ${variantProductUrl}
