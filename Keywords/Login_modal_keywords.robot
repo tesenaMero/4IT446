@@ -12,7 +12,9 @@ Open login form
 Login to czc with credentials
 	[Arguments]		${user}		${pwd}
 	Input Text		${userNameField}	${user}
+	Sleep   5
 	Input Text	${passwordField}	${pwd}
+	Sleep   5
 	Click Button	${submitLogin}
 
 Close login modal

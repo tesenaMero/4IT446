@@ -22,11 +22,13 @@ Product is found and displayed as first product
 
 *** Test Cases ***
 Test search for given existing product
+    [Documentation]  Test search for given existing product, expecting to see the product listed as first
     [Tags]  Product     ProductSearch   PositiveSmokeTest
 	Search for	${productName}
 	Product is found and displayed as first product      ${productName}
 
 Test search for not existing product
+    [Documentation]  Test search for not existing product, expecting to see message that prodoct does not exist
     [Tags]  Product     ProductSearch
 	Search for	'Not existing product name'
 	Product not found warning displayed
