@@ -11,6 +11,7 @@ ${termsOfUseContent}    css=#docs-internal-guid-e40922b1-e43e-f867-b22a-0e2a2f35
 
 *** Test Cases ***
 Test open terms & conditions page
+    [Documentation]  Checks if Terms & Conditions link is visible a leads to appropriate page.
     [Tags]    Conditions    TermsAndConditions
     Element Should Be Visible   ${termsOfUseLink}
     Click Element   ${termsOfUseLink}
