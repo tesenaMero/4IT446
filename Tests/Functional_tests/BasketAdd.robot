@@ -21,12 +21,12 @@ ${value}
 *** Test Cases ***
 Add to basket button is visible on product tile
     [Documentation]  Verify that add to basket is visible on product tile
-    [Tags]  basket  smoke
+    [Tags]  BasketAdd  smoke
     wait until page contains element  ${addToBasketTileButton}
 
 Add to basket from tile is possible
     [Documentation]  Verify that add to basket function is available from product tile
-    [Tags]  basket
+    [Tags]  BasketAdd
     [Teardown]  Throw product off the basket
     click element  ${addToBasketTileButton}
     wait until page contains element  ${inTheBasketInfo}
@@ -35,7 +35,7 @@ Add to basket from tile is possible
 
 Add to basket from detail is possible
     [Documentation]  Verify that add to basket function is available from product detail
-    [Tags]  basket
+    [Tags]  BasketAdd
     [Teardown]  Throw product off the basket
     click link  ${testProduct}
     click element  ${addToBasketTileButton}

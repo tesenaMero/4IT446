@@ -20,24 +20,24 @@ ${newReviewForm}  id=new-review-form
 *** Test Cases ***
 Rating is visible on product tile
     [Documentation]  Verify that rating is visible on product tile
-    [Tags]  rating  smoke
+    [Tags]  Rating  smoke
     wait until page contains element  ${tileRating}
 
 Rating is visible on product detail
     [Documentation]  Verify that rating is visible on product detail
-    [Tags]  rating  smoke
+    [Tags]  Rating  smoke
     click link  ${testProduct}
     wait until page contains element  ${detailRating}
 
 Rating for test product is as expected
     [Documentation]  Verify that rating shown is equal to expected value
-    [Tags]  rating
+    [Tags]  Rating
     ${value}=  get text  ${detailRating}
     should be equal  ${expectedTestProductRating}  ${value}
 
 Not logged user have to log in for rating
     [Documentation]  Verify that rating is available only for logged users
-    [Tags]  rating
+    [Tags]  Rating
     click element  ${rateButton}
     wait until page does not contain element  ${newReviewForm}
     wait until page contains element  ${logInForm}
@@ -45,7 +45,7 @@ Not logged user have to log in for rating
 
 Logged user can rate
     [Documentation]  Verify that rating is available for logged users
-    [Tags]  rating
+    [Tags]  Rating
     click element  ${rateButton}
 	Login to czc with credentials		${validUserName}	${validPassword}
 	wait until page contains element  ${newReviewForm}
